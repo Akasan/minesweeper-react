@@ -1,3 +1,4 @@
+import styles from "./cell.module.css";
 enum CellType {
   NOTHING = 0,
   BOMB = 1,
@@ -20,22 +21,9 @@ type CellProps = {
 };
 
 const Cell = (props: CellProps) => {
-  const { onClick, text, isOpened, cellType } = props;
-  const backgroundColor = cellType === CellType.NOTHING ? "gray" : "red";
+  const { onClick, text, isOpened } = props;
   return (
-    <div
-      className="cell"
-      style={{
-        backgroundColor: backgroundColor,
-        fontSize: "16px",
-        width: "30px",
-        height: "30px",
-        float: "left",
-        border: "1px solid black",
-        textAlign: "center",
-      }}
-      onClick={onClick}
-    >
+    <div className={`${styles.cell} ${styles.nothing_cell}`} onClick={onClick}>
       <p>{isOpened ? text : ""}</p>
     </div>
   );

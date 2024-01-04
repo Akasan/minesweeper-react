@@ -23,6 +23,7 @@ function App() {
       for (let r = 0; r < ROW; r++) {
         items.push(
           <NothingCell
+            key={String(c * COL + r)}
             neighborBombNum={c + r}
             isOpened={map[c][r]}
             onClick={() => {
