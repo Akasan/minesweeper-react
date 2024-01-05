@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { NothingCell, BombCell } from "./components/cell";
+import { NothingCell, BombCell } from "./components/Cell/Cell";
 
 const COL = 20;
 const ROW = 10;
