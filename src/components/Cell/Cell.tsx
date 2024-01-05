@@ -1,4 +1,4 @@
-import styles from "./cell.module.css";
+import styles from "./Cell.module.css";
 enum CellType {
   NOTHING = 0,
   BOMB = 1,
